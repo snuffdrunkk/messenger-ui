@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Settings</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="static/css/menu-line.css" rel="stylesheet">
+    <link href="static/css/settings.css" rel="stylesheet">
+    <link href="static/css/modal-photo.css" rel="stylesheet">
+    <link href="static/css/modal-login.css" rel="stylesheet">
+    <link href="static/css/modal-username.css" rel="stylesheet">
+    <link href="static/css/modal-email.css" rel="stylesheet">
+    <link href="static/css/modal-password.css" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/a1a44e76b4.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="left-side">
+        <a href="/messenger" class="header-name">
+            <img src="static/images/logo.svg" alt="Logo">
+            L-Message
+        </a>
+    </div>
+    <div class="right-side">
+        <a href="/profile">
+            <img src="static/images/settings.svg" alt="Settings" class="settings-image">
+        </a>
+        <a href="#">
+            <img src="static/images/about.svg" alt="About" class="about-image">
+        </a>
+        <img src="static/images/avatar.svg" alt="Profile Picture" class="user-image"/>
+    </div>
+</div>
+<div class="settings-block">
+    <div class="settings-left-side">
+        <div class="settings-information">
+            <span>Настройки</span>
+            <ul>
+                <li><a href="#">Профиль</a></li>
+                <li><a href="#">Безопасность</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="settings-right-side">
+        <div class="settings-right-side-block">
+            <span class="settings-title">Профиль</span>
+            <div class="settings-profile-block">
+                <div class="settings-profile-photo">
+                    <div class="settings-profile-photo-left">
+                        <span>Фото</span>
+                    </div>
+                    <div class="settings-profile-photo-center">
+                        <img src="static/images/person.jpg" alt="Person" class="person-image">
+                    </div>
+                    <div class="settings-profile-photo-right">
+                        <button id="photo-change">Изменить</button>
+                        <div id="photo-modal" class="modal-photo">
+                            <div class="modal-photo-content">
+                                <div class="modal-photo-content-header">
+                                    <span>Фото профиля</span>
+                                </div>
+                                <div class="modal-photo-top">
+                                    <img src="static/images/musashi.jpg" alt="Person" class="person-image-modal">
+                                </div>
+                                <div class="modal-photo-center">
+                                    <div class="modal-photo-center-left">
+                                        <img src="static/images/plus.png" alt="Add" class="person-image-add-photo">
+                                        <span>Добавить фото</span>
+                                    </div>
+                                    <div class="modal-photo-center-right">
+                                        <img src="static/images/plus.png" alt="Delete" class="person-image-delete-photo">
+                                        <span>Удалить фото</span>
+                                    </div>
+                                </div>
+                                <div class="modal-photo-bottom">
+                                    <button class="modal-photo-bottom-cancel">Отмена</button>
+                                    <button class="modal-photo-bottom-save">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-profile-account">
+                    <div class="settings-profile-account-left">
+                        <span>Отображаемое имя</span>
+                    </div>
+                    <div class="settings-profile-account-center">
+                        <span>Admin</span>
+                    </div>
+                    <div class="settings-profile-account-right">
+                        <button id="login-change">Изменить</button>
+                        <div id="login-modal" class="modal-login">
+                            <div class="modal-login-content">
+                                <div class="modal-login-content-header">
+                                    <span>Отображаемое имя</span>
+                                </div>
+                                <div class="modal-login-top">
+                                    <div class="modal-login-input">
+                                        <input type="text" id="username" required>
+                                        <label for="username">Введите отображаемое имя пользователя</label>
+                                    </div>
+                                </div>
+                                <div class="modal-login-bottom">
+                                    <button class="modal-login-bottom-cancel">Отмена</button>
+                                    <button class="modal-login-bottom-save" id="save-button-login">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-profile-username">
+                    <div class="settings-profile-username-left">
+                        <span>Имя пользователя</span>
+                    </div>
+                    <div class="settings-profile-username-center">
+                        <span>Axe Echkere</span>
+                    </div>
+                    <div class="settings-profile-username-right">
+                        <button id="username-change">Изменить</button>
+                        <div id="username-modal" class="modal-username">
+                            <div class="modal-username-content">
+                                <div class="modal-username-content-header">
+                                    <span>Личные данные</span>
+                                </div>
+                                <div class="modal-username-top">
+                                    <div class="modal-username-input">
+                                        <input type="text" id="name" required>
+                                        <label for="name">Введите отображаемое имя</label>
+                                        <input type="text" id="surname" required>
+                                        <label for="surname">Введите отображаемую фамилию</label>
+                                    </div>
+                                </div>
+                                <div class="modal-username-bottom">
+                                    <button class="modal-username-bottom-cancel">Отмена</button>
+                                    <button class="modal-username-bottom-save" id="save-button-username">Сохранить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-profile-email">
+                    <div class="settings-profile-email-left">
+                        <span>Адрес электронной почты</span>
+                    </div>
+                    <div class="settings-profile-email-center">
+                        <span>a*****h@gmail.com</span>
+                    </div>
+                    <div class="settings-profile-email-right">
+                        <div class="email-right-unlink">
+                            <button>Отвязать</button>
+                        </div>
+                        <div class="email-right-change">
+                            <button id="email-change">Изменить</button>
+                            <div id="email-modal" class="modal-email">
+                                <div class="modal-email-content">
+                                    <div class="modal-email-content-header">
+                                        <span>Адрес электронной почты</span>
+                                    </div>
+                                    <div class="modal-email-top">
+                                        <div class="modal-email-input">
+                                            <input type="text" id="email-address" required>
+                                            <label for="email-address">Введите адрес электронной почты</label>
+                                        </div>
+                                    </div>
+                                    <div class="modal-email-bottom">
+                                        <button class="modal-email-bottom-cancel">Отмена</button>
+                                        <button class="modal-email-bottom-save" id="save-button-email">Сохранить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="settings-title">Безопастность</span>
+            <div class="settings-security-block">
+                <div class="settings-security-password">
+                    <div class="settings-security-password-left">
+                        <span>Пароль</span>
+                    </div>
+                    <div class="settings-security-password-center">
+                        <span>*******</span>
+                    </div>
+                    <div class="settings-security-password-right">
+                        <button>Изменить</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="static/scripts/modal-photo.js"></script>
+<script src="static/scripts/modal-login.js"></script>
+<script src="static/scripts/modal-username.js"></script>
+<script src="static/scripts/modal-email.js"></script>
+<script src="static/scripts/modal-password.js"></script>
+</body>
+</html>
